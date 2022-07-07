@@ -1,0 +1,11 @@
+<div *ngFor="let option of options">
+	<label>
+    <input type="checkbox"
+           name="options"
+           value="{{option.value}}"
+           [(ngModel)]="option.checked"
+           (ngModelChange)="onChange($event)"
+           />
+    {{option.name}}
+  </label>
+</div>
